@@ -3,94 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="css/reset.css" rel="stylesheet" type="text/css" />
-<link href="css/layout.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost:8080/web/js/jquery-1.7.2.min.js"></script>
-<script>
-
-	function setIframeHeight(iframe) {
-		if (iframe) {
-			var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-			if (iframeWin.document.body) {
-				iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
-			}
-		}
-	};
-
-	window.onload = function () {
-		setIframeHeight(document.getElementById('external-frame'));
-	};
-$(function(){
-	$('.Wibox_nav').children('li').click(function(){
-		$(this).addClass('on').siblings().removeClass('on');
-	})
-});
-	
-</script>
-<style>
-*{ margin:0; padding:0;}
-.clearfix:after{content:''; display:table; clear:both;}
-.clearfix{*zoom:1;}
-.Wibox{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-.Wibox_header{height: 35px; line-height:33px;position: absolute; top: 0; right: 0; left: 0; background:url(images/wibox_nav_img.jpg) repeat-x; }
-.Wibox_header h2{ float:left; font-size:15px; font-family:"微软雅黑"; color:#cbf1fd; font-weight:normal; padding-left:15px;}
-.Wibox_header a.exit{float: right; display: inline-block;width: 11px; height: 12px;margin-top: 12px;margin-right: 20px;
-background: url(images/bg.png) no-repeat 0 -65px; }
-.Wibox_header a.exit:hover{ background-position:-12px -65px;}
-
-.Wibox_left{ width: 200px; position: absolute; top:38px; bottom: 0; left: 0; background:#484f61;}
-.Wibox_left .Wibox_admin{ padding:12px 0px 15px 15px;}
-.Wibox_left .Wibox_admin span{ float:left; border:2px solid #FFFFFF; margin-right:15px;*dispaly:inline;*zoom:1; cursor:pointer;}
-.Wibox_left .Wibox_admin .Wibox_name{ float:left;color:#FFFFFF;font-family:"微软雅黑"; padding-top:6px;}
-.Wibox_left .Wibox_admin .Wibox_name h3{font-size:22px;  font-weight:normal;}
-.Wibox_left .Wibox_admin .Wibox_name p{font-size:14px; line-height:30px;}
-
-.Wibox_left ul{ overflow:hidden;zoom:1;}
-.Wibox_left ul li{ height:42px; line-height:42px; font-size:0; border-bottom:1px solid #434751; border-left:4px solid #484f61; cursor:pointer;}
-.Wibox_left ul li:hover{ border-left:4px solid #4ba9df; background:#41444b; border-bottom:1px solid #41444b;}
-.Wibox_left ul li:hover i.icon{background-position:-47px -240px;}
-.Wibox_left ul li:hover a{ color:#FFFFFF;padding-left:50px;}
-.Wibox_left ul li.on{ border-left:4px solid #4ba9df; background:#41444b; border-bottom:1px solid #41444b;}
-.Wibox_left ul li.on i.icon{background-position:-47px -240px;}
-.Wibox_left ul li.on a{ color:#FFFFFF;padding-left:50px;}
-.Wibox_left ul li a{ float:left; width:120px; font-size:16px; color:#96999f; padding-left:44px; -webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;-o-transition:all .3s;transition:all .3s ease-in-out;}
-.Wibox_left ul li i.icon{ width:5px; height:10px; float:right; background:url(images/bg.png) no-repeat; background-position:-47px -219px; margin:17px 10px 0 0;}
-.Wibox_right{ position: absolute; top: 38px; right: 0; bottom: 0; left: 200px; overflow: auto;  }
-</style>
 </head>
 
 <body>
-<div class="Wibox">
-	<div class="Wibox_header">
-    	<h2>WIBOX后台管理</h2>
-        <a class="exit" href="javascript:void(0);" onclick="logout()" title="退出系统"></a>
-    </div>
-	<div class="Wibox_left">
-    	<div class="Wibox_admin clearfix">
-        	<span><img src="images/img_tt.jpg" width="71" height="71" alt="" /></span>
-            <div class="Wibox_name">
-            	<h3>Admin</h3>
-                <p>欢迎你!</p>
-            </div>
-        </div>
-        <ul class="Wibox_nav clearfix">
-           <li><a href="../manage/fileList.do" target="name_bottom">资料管理</a><i class="icon"></i></li>
-           <li><a href="../manage/companyEdit.do" target="name_bottom">公司简介修改</a><i class="icon"></i></li>
-           <li><a href="../manage/pageConfig.do" target="name_bottom">基本配置</a><i class="icon"></i></li>
-           <li><a href="../manage/fileTypeList.do" target="name_bottom">文件类型配置</a><i class="icon"></i></li>
-           <li><a href="../manage/onlineTimeEdit.do" target="name_bottom">在线时长配置</a><i class="icon"></i></li>
-           <li><a href="../manage/productList.do" target="name_bottom">产品管理</a><i class="icon"></i></li>
-           <li><a href="../manage/userEdit.do" target="name_bottom">修改密码</a><i class="icon"></i></li>
-           <li><a href="../manage/wifiEdit.do" target="name_bottom">修改WIFI名称</a><i class="icon"></i></li>
-           <li><a href="../manage/productTypeList.do" target="name_bottom">产品类型配置</a><i class="icon"></i></li>
-        </ul>
-    </div>
-
-    <div class="Wibox_right">
-		<iframe name="name_bottom" src="homePage.do" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  id="external-frame"  onload="setIframeHeight(this)"></iframe>
-	</div>
-</div>
-
-
+<p style='display:block; width:500px; margin:0px auto;font-size:30px;'>wei love you!</p>
 </body>
 </html>
