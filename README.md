@@ -1,2 +1,0 @@
-# wei
-my text
